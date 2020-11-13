@@ -5,7 +5,7 @@ function! s:RunInInteractiveShell(command, bang)
     if a:bang
       silent execute '!clear'
     endif
-    execute '!' . a:command
+    silent execute '!' . a:command
   finally
     execute 'set shellcmdflag=' . saved_shellcmdflag
   endtry
